@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Metodo responsavel por fazer a configuracao base do Retrofit
-    fun setupRetrofit() {
+    private fun setupRetrofit() {
         /*
            @TODO 5 - realizar a configuracao base do retrofit
            Documentacao oficial do retrofit - https://square.github.io/retrofit/
@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Metodo responsavel por buscar todos os repositorios do usuario fornecido
-    fun getAllReposByUserName() {
+    private fun getAllReposByUserName() {
 
         // @TODO 6 - realizar a implementacao do callback do retrofit e chamar o metodo setupAdapter se retornar os dados com sucesso
         githubApi.getAllRepositoriesByUser(nomeUsuario.text.toString()).enqueue(object : Callback<List<Repository>> {
